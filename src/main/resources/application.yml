@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    username: stan
+    password: stan
+    url: jdbc:postgresql://localhost:5432/postgres?useSSL=false&?characterEncoding=utf8
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL57InnoDBDialect
+  http:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB 
+
+server:
+  port: 9099
+
+springfox:
+  documentation:
+    swagger:
+      v2:
+        host: junior.balinasoft.com
+
+project:
+  url: https://junior.balinasoft.com
+  security:
+    access-token:
+      length: 64
+      symbols: 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+      max-count: 10
+  image-folder: /first-task/images
+
+logging:
+  path: /first-task/log
